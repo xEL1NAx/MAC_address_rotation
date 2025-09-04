@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 import os
-import time
 import random
 
-# Change "wlan0" to the name of your Wi-Fi interface
-INTERFACE = "wlan0"
+INTERFACE = "wlan0"  # Change if your Wi-Fi interface is different
 
 def random_mac():
     """Generate a random, locally administered MAC address."""
@@ -19,12 +17,9 @@ def random_mac():
 def change_mac():
     new_mac = random_mac()
     print(f"Changing {INTERFACE} MAC to {new_mac}")
-    os.system(f"sudo ip link set {INTERFACE} down")
-    os.system(f"sudo ip link set {INTERFACE} address {new_mac}")
-    os.system(f"sudo ip link set {INTERFACE} up")
+    os.system(f"ip link set {INTERFACE} down")
+    os.system(f"ip link set {INTERFACE} address {new_mac}")
+    os.system(f"ip link set {INTERFACE} up")
 
 if __name__ == "__main__":
-    while True:
-        change_mac()
-        # Wait 10 minutes before changing again
-        time.sleep(600)
+    change_mac()
