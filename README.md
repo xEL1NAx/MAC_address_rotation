@@ -1,4 +1,4 @@
-# Raspberry Pi Rotating Wi-Fi MAC Address
+# Raspberry Pi Rotating Network MAC Address
 
 This project makes your Raspberry Pi automatically **rotate its Wi-Fi MAC address** in regular cycles — similar to iOS’s *“Private Wi-Fi Address (Rotating)”* feature.  
 Rotating your MAC address reduces tracking and increases privacy on Wi-Fi networks.
