@@ -1,0 +1,7 @@
+[Unit]
+Description=Rotate Wi-Fi MAC Address
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/rotate_mac.py
